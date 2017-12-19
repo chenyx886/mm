@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IconTextItem">
+        <attr name="iconDrawable" format="reference"/>
+        <attr name="textItem" format="reference|string"/>
+        <attr name="lineVisible" format="boolean"/>
+        <attr name="lineFullScreen" format="boolean"/>
+        <attr name="rightIcoVisible" format="boolean"/>
+        <attr name="rightText" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextFieldItem">
+        <attr name="titleTxt" format="reference|string"/>
+        <attr name="hintTxt" format="reference|string"/>
+        <attr name="lineVisib" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="clickableBackground" format="reference"/>
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="white_bg" format="reference|color"/>
+    <attr name="font_color" format="reference|color"/>
+    <attr name="font_color2" format="reference|color"/>
+    <attr name="font_red" format="reference|color"/>
+    <attr name="isColorUi" format="boolean"/>
+    <attr name="divider_black" format="reference|color"/>
+    <attr name="divider_light_grey" format="reference|color"/>
+    <attr name="tab_bg" format="reference|color"/>
+</resources>

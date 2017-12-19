@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/body_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_header_layout"/>
+
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        android:gravity="left|top"
+        android:hint="说点什么吧..."
+        android:inputType="textMultiLine"
+        android:minHeight="200dp"
+        android:padding="12.0dp"
+        android:paddingRight="30dp"
+        android:textColor="#ff3b3b3b"
+        android:textColorHint="@color/page_text_color"
+        android:textSize="@dimen/text_size14"/>
+
+    <include layout="@layout/include_choice_pic_layout"/>
+
+    <TextView
+        android:id="@+id/tv_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:background="@color/white"
+        android:drawableLeft="@mipmap/ic_my_location"
+        android:drawablePadding="6dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:text="定位中..."
+        android:textColor="@color/page_title_color"
+        android:textSize="@dimen/text_size14"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+
+</LinearLayout>

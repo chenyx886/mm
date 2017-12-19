@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:scaleType="fitCenter"/>
+
+    <View
+        android:id="@+id/view_h"
+        android:layout_width="8dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView"/>
+
+    <TextView
+        android:id="@+id/leftTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/view_h"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@color/page_title_color"
+        android:textSize="@dimen/text_size14"/>
+
+
+    <TextView
+        android:id="@+id/rightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/img_point"
+        android:maxWidth="150dp"
+        android:singleLine="true"
+        android:text=""
+        android:textSize="@dimen/text_size14"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/img_point"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/arrow"/>
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_diliver"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/lineFull"
+        style="@style/line_diliver"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+</RelativeLayout>

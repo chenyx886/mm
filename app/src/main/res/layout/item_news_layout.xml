@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              app:isColorUi="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="6dp"
+                    android:maxLines="2"
+                    android:textColor="@color/page_title_color"
+                    android:textSize="@dimen/text_size16"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_one"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_two"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_three"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="2017-08-23 12:45"
+                    android:textColor="@color/page_text_color"
+                    android:textSize="@dimen/text_size12"/>
+
+            </LinearLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/iv_right_img"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="15dp"
+                android:scaleType="centerCrop"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View style="@style/line_diliver"/>
+</LinearLayout>

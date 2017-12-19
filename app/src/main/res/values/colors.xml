@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e8410c</color>
+    <color name="colorPrimaryDark">#e8410c</color>
+    <color name="colorAccent">#0c7e6f</color>
+
+    <color name="black">#000000</color>
+    <color name="body_bg">#f4f4f4</color>
+    <color name="header_press_bg">#98ccff</color>
+
+    <color name="button_default_bg">#ffffff</color>
+    <color name="button_press_bg">#e6eff5</color>
+
+    <color name="colorTabChecked">#0c7e6f</color>
+    <color name="colorTabNormal">#a8b0bd</color>
+
+    <color name="colorRegister">#2bb1f2</color>
+    <color name="white">#ffffffff</color>
+
+    <color name="set_txtcolor">#333333</color>
+    <color name="f5f5f5">#f5f5f5</color>
+
+    <color name="page_title_color">#4c4c4c</color>
+    <color name="page_text_color">#898989</color>
+    <color name="top_bg_color">#00000000</color>
+    <color name="HintColor">#cbcbcbcb</color>
+    <color name="eceaea">#eceaea</color>
+    <color name="time_line">#C3CFD6</color>
+    <color name="statusBarColor">#dd4712</color>
+    <color name="group_top_bg">#C3C3C3</color>
+
+
+    <color name="bg_focus">#DDDDDD</color>
+    <color name="card_edit_txt_color">#1b4b7c</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="grey_divider_color">#eaeaea</color>
+    <color name="video_bg">#ba1d1d1d</color>
+    <color name="btn_bg">#e9e9e9</color>
+
+
+
+</resources>

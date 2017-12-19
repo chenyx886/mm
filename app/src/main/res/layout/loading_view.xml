@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/view_load"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/load_data_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/load_data_bg"/>
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:progressDrawable="@drawable/audio_loading_img"/>
+</FrameLayout>

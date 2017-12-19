@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/headerLayout_top"
+        layout="@layout/include_header_layout"/>
+
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout_top"
+        android:layout_marginBottom="45dp"/>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#f4f4f4"/>
+
+        <include layout="@layout/article_tool_bar"/>
+
+        <cn.dreamtobe.kpswitch.widget.KPSwitchFSPanelLinearLayout
+            android:id="@+id/panel_root"
+            style="@style/Panel"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

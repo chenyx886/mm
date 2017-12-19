@@ -1,0 +1,66 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="true">
+
+    <!-- 中间内容-->
+    <FrameLayout
+        android:id="@+id/fl_relcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/tab_group_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_news"
+            style="@style/home_rb_style"
+            android:drawableTop="@drawable/selector_tab_news"
+            android:text="@string/news"/>
+
+
+        <RadioButton
+            android:id="@+id/rb_find"
+            style="@style/home_rb_style"
+            android:drawableTop="@drawable/selector_tab_find"
+            android:text="@string/find"/>
+
+
+        <ImageView
+            android:id="@+id/show_menu"
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/main_img_selector"
+            android:scaleType="fitXY"/>
+
+        <RadioButton
+            android:id="@+id/rb_msg"
+            style="@style/home_rb_style"
+            android:drawableTop="@drawable/selector_tab_msg"
+            android:text="@string/msg"/>
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/home_rb_style"
+            android:drawableTop="@drawable/selector_tab_mine"
+            android:text="@string/mine"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

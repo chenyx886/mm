@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_press_btn"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/tv_msg_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#cccccc"
+        android:text="12:45"
+        android:textSize="@dimen/text_size12"/>
+
+
+    <ImageView
+        android:id="@+id/img_msg_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_task_notify"/>
+
+    <TextView
+        android:id="@+id/tv_unRead"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="42dp"
+        android:background="@drawable/bg_red_circle"
+        android:gravity="center"
+        android:text="0+"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size10"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_msg_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_toLeftOf="@id/tv_msg_time"
+        android:layout_toRightOf="@id/img_msg_icon"
+        android:text="新闻提醒"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/text_size16"/>
+
+    <TextView
+        android:id="@+id/tv_msg_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_msg_title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/img_msg_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="暂无新消息"
+        android:textColor="#999999"
+        android:textSize="@dimen/text_size12"/>
+
+    <View
+        android:id="@+id/msg_line_diliver"
+        style="@style/line_diliver"
+        android:layout_below="@+id/img_msg_icon"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/img_msg_icon"/>
+
+
+</RelativeLayout>

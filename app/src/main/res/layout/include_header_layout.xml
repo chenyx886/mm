@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/headerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/colorAccent"
+    android:gravity="center_vertical"
+    skin:enable="true">
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/selector_press_heard_btn"
+        android:drawableLeft="@mipmap/back"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size14"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size16"
+        android:visibility="gone"/>
+
+    <com.flyco.tablayout.SegmentTabLayout
+        android:id="@+id/topTab"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        app:tl_bar_color="@color/colorPrimary"
+        app:tl_indicator_color="@android:color/white"
+        app:tl_indicator_corner_radius="8dp"
+        app:tl_tab_padding="20dp"
+        app:tl_textSelectColor="@color/colorPrimary"/>
+
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector_press_heard_btn"
+        android:scaleType="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector_press_heard_btn"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="完成"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size14"
+        android:visibility="gone"/>
+
+</RelativeLayout>

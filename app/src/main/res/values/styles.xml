@@ -1,0 +1,156 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- 对话框样式 -->
+    <style name="showDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+
+    <!--主页底部Tab RadioButton style-->
+    <style name="home_rb_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:textSize">@dimen/text_size12</item>
+        <item name="android:textColor">@color/home_rb_color_selector</item>
+        <item name="android:layout_gravity">center_vertical|bottom</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- 分割线 0.5dp -->
+    <style name="line_diliver">
+        <item name="android:background">#e5e5e5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+    <!-- 垂直分割线 -->
+    <style name="divider_vertical">
+        <item name="android:layout_width">0.2dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">#d8d8d8</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="MainTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size14</item>
+    </style>
+
+    <style name="SecondTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/text_size12</item>
+    </style>
+
+    <style name="TimeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textSize">@dimen/text_size12</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+    <style name="Panel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:background">#fffefefe</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="line_width">
+        <item name="android:background">#e5e5e5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="line_height">
+        <item name="android:background">@color/colorRegister</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- 我的Item -->
+    <style name="mine_item_depart_style">
+        <item name="android:drawableRight">@mipmap/arrow</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="InputStyle" parent="AppTheme">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textColorHint">#999999</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:maxLength">32</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+
+    <style name="textStyle" parent="AppTheme">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">12dp</item>
+    </style>
+
+    <!-- 设置ActionBar菜单字体 -->
+    <style name="ActionMenuTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="PhotoPickerTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="actionMenuTextAppearance">@style/ActionMenuTextStyle</item>
+    </style>
+
+
+    <style name="ToolBarTextAppearance">
+        <item name="android:textSize">@dimen/text_size14</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="share_dialog_anim_style">
+        <item name="android:windowEnterAnimation">@anim/share_dialog_anim_enter_bottom</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/share_dialog_anim_exit_bottom</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+</resources>

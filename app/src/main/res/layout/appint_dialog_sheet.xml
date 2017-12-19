@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/appoint_dialog_left_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="15dp"
+        android:textColor="#4b4b57"
+        android:textSize="@dimen/text_size16"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/appoint_dialog_center_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="临时变更"
+        android:textColor="#4b4b57"
+        android:textSize="@dimen/text_size16"/>
+
+    <View style="@style/line_diliver"/>
+
+    <EditText
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:focusableInTouchMode="true"
+        android:gravity="left|top"
+        android:hint="192.168.5.115:9526"
+        android:inputType="textMultiLine"
+        android:minHeight="80dp"
+        android:padding="15.0dp"
+        android:paddingRight="30dp"
+        android:textColor="#ff3b3b3b"
+        android:textColorHint="@color/HintColor"
+        android:textSize="@dimen/text_size14"
+        android:visibility="gone"/>
+
+    <View style="@style/line_diliver"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/appoint_dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="取消"
+            android:textColor="@color/page_text_color"
+            android:textSize="@dimen/text_size16"/>
+
+        <View style="@style/divider_vertical"/>
+
+        <Button
+            android:id="@+id/appoint_dialog_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="提交"
+            android:textColor="@color/page_text_color"
+            android:textSize="@dimen/text_size16"/>
+    </LinearLayout>
+
+</LinearLayout>

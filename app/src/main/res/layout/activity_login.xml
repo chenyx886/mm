@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- 展示部分 -->
+    <ImageView
+        android:id="@+id/loginClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:padding="20dp"
+        android:src="@mipmap/login_close"/>
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/logo"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/logo_phone"/>
+
+            <com.mm.widget.ClearEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/input_phone"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColorHint="#e3e3e3"
+                android:textSize="@dimen/text_size16"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#e3e3e3"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/logo_pwd"/>
+
+            <com.mm.widget.ClearEditText
+                android:id="@+id/et_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:hint="@string/input_password"
+                android:inputType="textPassword"
+                android:padding="8.0dp"
+                android:singleLine="true"
+                android:textColorHint="#e3e3e3"
+                android:textSize="@dimen/text_size16"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#e3e3e3"/>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/tv_login"
+        android:layout_width="285.00dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        android:background="@mipmap/btn_login_bg"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size18"/>
+
+
+    <TextView
+        android:id="@+id/go_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="@string/go_register"
+        android:textColor="@color/colorRegister"
+        android:textSize="@dimen/text_size14"/>
+
+</LinearLayout>

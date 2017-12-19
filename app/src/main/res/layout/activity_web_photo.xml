@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#000000">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photo_browser_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/photo_cross_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:src="@mipmap/cross"/>
+
+    <TextView
+        android:id="@+id/photo_order_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/text_size14"/>
+
+    <TextView
+        android:id="@+id/photo_save_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:padding="10dp"
+        android:text="保存"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+
+    <ImageView
+        android:id="@+id/photo_loading_iv"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/loading"
+        android:visibility="gone"/>
+
+</FrameLayout>

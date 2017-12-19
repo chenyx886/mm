@@ -1,0 +1,167 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    signingConfigs {
+        debugConfig {
+            storeFile file('debug.jks')
+            storePassword 'mm2017'
+            keyAlias 'mm.keystore'
+            keyPassword 'mm2017'
+        }
+
+        releaseConfig {
+            storeFile file('debug.jks')
+            storePassword 'mm2017'
+            keyAlias 'mm.keystore'
+            keyPassword 'mm2017'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.mm"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "f3b6cf52ba96b40697714f4c", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+
+        multiDexEnabled true
+
+        aaptOptions.cruncherEnabled = false
+        aaptOptions.useNewCruncher = false
+    }
+
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+        unsignedBuild {
+            debuggable false
+            versionNameSuffix '-unsigned'
+            signingConfig signingConfigs.debugConfig
+        }
+        debug {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化 开启压缩
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debugConfig
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = outputFile.name.replace(".apk", "_${defaultConfig.versionName}_${releaseTime()}.apk")
+                outputFileName = fileName
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+            jniLibs.srcDirs = ['src/main/jnilibs']
+        }
+    }
+
+    greendao {
+        schemaVersion 3
+        daoPackage 'com.mm.data.gen'
+        targetGenDir 'src/main/java'
+    }
+
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    //库项目
+    compile project(':libs')
+    compile project(':photopicker')
+    compile project(':xrecyclerview')
+    compile project(':convenientbanner')
+    compile files('libs/tbs_sdk_thirdapp_v3.5.0.jar')
+    compile files('libs/BaiduLBS_Android.jar')
+    //调试jar
+    testCompile 'junit:junit:4.12'
+    //远程库jar
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'com.pnikosis:materialish-progress:1.7'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.2'
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okio:okio:1.9.0'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.5.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'org.greenrobot:greendao:3.2.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.trello:rxlifecycle:0.3.1'
+    compile 'com.trello:rxlifecycle-components:0.3.1'
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.werb.permissionschecker:permissionschecker:0.0.1-beta2'
+    compile 'com.trello:rxlifecycle:0.3.1'
+    compile 'com.trello:rxlifecycle-components:0.3.1'
+    compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.tamic.novate:novate:1.5.3.2'
+    //极光推送
+    compile 'cn.jiguang.sdk:jpush:3.0.9'
+    compile 'cn.jiguang.sdk:jmessage:2.3.0'
+    compile 'cn.jiguang.sdk:jcore:1.1.7'
+    //点击图片 查处相册大图 支持绽放
+    compile 'com.nhaarman.supertooltips:library:3.0.0'
+    compile 'com.bm.photoview:library:1.4.1'
+    compile 'cn.dreamtobe.kpswitch:library:1.6.0'
+    //视频播放
+    compile 'fm.jiecao:jiecaovideoplayer:5.5.4'
+    //内存泄漏检测
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+}

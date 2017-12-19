@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">苗苗</string>
+
+
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="quit">退出登录</string>
+
+    <string name="news">政讯</string>
+    <string name="find">发现</string>
+    <string name="msg">消息</string>
+    <string name="mine">我的</string>
+
+    <string name="news_msg">新闻消息</string>
+    <string name="find_msg">发现消息</string>
+    <string name="sys_msg">系统消息</string>
+    <string name="cleanData">清除缓存</string>
+    <string name="update">检查更新</string>
+    <string name="help">帮助中心</string>
+    <string name="feedback">意见反馈</string>
+
+    <string name="press_one_more_to_exit">再点一次退出应用</string>
+
+    <!--发现-->
+    <string name="release_resource">发苗苗</string>
+    <string name="release">发布</string>
+    <string name="send">发送</string>
+    <string name="comment">评论</string>
+    <!--我的-->
+    <string name="set">设置</string>
+    <string name="mcenter">会员中心</string>
+    <string name="my_qr_code">扫一扫</string>
+    <string name="scan_code">扫一扫二维码、添加我的为好友</string>
+    <string name="mycardholder">我的名片夹</string>
+    <string name="mymicro_home">我的微主页</string>
+    <string name="new_notice">新消息通知</string>
+    <string name="voice">声音</string>
+    <string name="shock">震动</string>
+    <string name="account">账号安全</string>
+    <string name="active">我的活动</string>
+    <string name="sign_up_success">报名成功</string>
+    <string name="sign_up_list">报名列表</string>
+    <string name="msg_list">消息</string>
+    <string name="who_saw_me">谁看过我</string>
+    <string name="new_friend">新的好友</string>
+    <string name="add_friend">添加好友</string>
+    <string name="exchange_card">交换名片</string>
+    <string name="demand">我的需求</string>
+    <string name="resource">我的资源</string>
+    <string name="edit_phone">修改手机号</string>
+    <string name="edit_pwd">修改密码</string>
+    <string name="my_figure">我的形象</string>
+    <string name="synopsis">公司概况</string>
+    <string name="my_integral">我的积分:</string>
+
+
+    <string name="input_phone">输入手机号</string>
+    <string name="input_nickname">输入昵称</string>
+    <string name="input_password">输入密码</string>
+    <string name="input_twopassword">请再次输入密码</string>
+    <string name="get_code">获取验证码</string>
+    <string name="go_register">没有账号，去注册</string>
+    <string name="go_login">已有账号，去登录</string>
+    <string name="complete">完成</string>
+
+    <string name="sharewechat_success">成功</string>
+    <string name="sharewechat_cancel">取消</string>
+    <string name="sharewechat_deny">被拒绝</string>
+    <string name="sharewechat_back">返回</string>
+    <string name="title_activity_group_details">GroupDetailsActivity</string>
+
+
+    <!--版本更新-->
+    <string name="version_update">发现新版本</string>
+    <string name="version_number">版本信息\n版本号%1$s\n%2$s</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_invite_friends">InviteFriendsActivity</string>
+
+
+    <!--友盟分享-->
+    <string name="wechat_friends">微信朋友</string>
+    <string name="wechat_circle">朋友圈</string>
+
+</resources>
