@@ -64,8 +64,7 @@ public class LoginActivity extends BaseMvpActivity<UserPresenter> implements ILo
 
     @Override
     protected void initUI() {
-        tvPhone.setText("18285011583");
-        tvPwd.setText("123456");
+
     }
 
     @OnClick({R.id.loginClose, R.id.tv_login, R.id.go_register})
